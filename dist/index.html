@@ -4,25 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style1.css">
-    <title>Xmeme</title>
+    <title>😎 Xmeme</title>
 </head>
 <body class = "bg-white"> 
     <div class="container">
-        <button class="bg-blue-400 text-white font-bold py-2 px-5 rounded-lg hover:bg-blue-500 shadow-xl">Contact Me</button>
-        <button class="bg-blue-400 text-white font-bold py-2 px-5 rounded-lg hover:bg-blue-500 shadow-xl">Contact Me</button>
+        <button class="bg-blue-400 text-white font-bold my-2 py-2 px-5 rounded-lg hover:bg-blue-500 shadow-xl">Contact Me</button>
+        <button class="bg-blue-400 text-white font-bold my-2 py-2 px-5 rounded-lg hover:bg-blue-500 shadow-xl">Contact Me</button>
     </div>
     <!-- <hr class="pt-1"> -->
 
     <!-- Card Component -->
     <div class="max-w-sm mx-auto my-10 flex p-6 bg-white rounded-lg shadow-xl">
         <div class="flex-shrink-0">
-            <img src="../img/download.png" alt="" class="h-12 w-12 rounded-full">
+            <img src="download.png" alt="" class="h-12 w-12 rounded-full">
         </div>
         <div class="ml-5 pt-0.25">
             <h4 class="text-xl text-grey-900">XMeme</h4>
             <p class="text-base text-green-600">Post your memes</p>
         </div>
     </div>
+
+    <form class="px-12 space-y-6" action="/memes" method="POST">
+        <div>
+            <input class="border border-black" type="text" name="name" placeholder="Enter Name" required>
+        </div>
+        
+        <input class="border border-black " size="50" type="url" name="url" placeholder="Enter Url" required>
+        <input class="border border-black mx-2" type="text" name="caption" placeholder="Enter caption" required>
+        
+        <button class="bg-red-400 text-white font-bold mx-2 my-2 py-1 px-5 rounded-lg hover:bg-red-500 shadow-xl" type="submit">Submit</button>
+    </form>
+
+    <!-- <script>
+        $('form').on('submit', (e) => {
+            // e.preventDefault();
+
+            const name = $('#name').val().trim();
+            const url = $('#url').val().trim();
+            const caption = $('#caption').val().trim();
+
+            const data = {
+                name,
+                url,
+                caption
+            };
+
+            $.post('/memes', data, function() {
+                console.log('Server recieved our data');
+            });
+        });
+        // document.getElementById('#form-data').reset();
+    </script> -->
 
     <!-- CARD COLUMNS -->
     <!-- component -->

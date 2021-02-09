@@ -2,16 +2,25 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 require('dotenv/config');
 
 const Post = require('./models/Post');
 
 const app =  express();
 const port = process.env.PORT || 5000;
-const postRoute = require('./routes/posts');
 
+
+//MiddleWares
+app.use(cors());
+app.use(express.urlencoded({
+    extend: true
+}));
 app.use(express.static('dist'));
-app.use(bodyParser.json());
+app.use(bodyParser.json({extend:true}));
+
+// Routes
+const postRoute = require('./routes/posts');
 app.use('/memes', postRoute);
 
 app.get('/', (req, res) => {
