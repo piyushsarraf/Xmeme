@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="style1.css">
     <title>😎 Xmeme</title>
 </head>
-<body class = "bg-white"> 
+<body class = "bg-indigo-200"> 
     <div class="container">
-        <button class="bg-blue-400 text-white font-bold my-2 py-2 px-5 rounded-lg hover:bg-blue-500 shadow-xl">Contact Me</button>
-        <button class="bg-blue-400 text-white font-bold my-2 py-2 px-5 rounded-lg hover:bg-blue-500 shadow-xl">Contact Me</button>
+        <button class="bg-blue-400 text-white font-bold my-2 py-2 px-5 rounded-lg hover:bg-blue-500 shadow-xl">
+            <a href="mailto:iassarraf@gmail.com">Contact Me</a>
+        </button>
+        <!-- <button class="bg-blue-400 text-white font-bold my-2 py-2 px-5 rounded-lg hover:bg-blue-500 shadow-xl">Contact Me</button> -->
     </div>
     <!-- <hr class="pt-1"> -->
 
@@ -20,291 +22,61 @@
         </div>
         <div class="ml-5 pt-0.25">
             <h4 class="text-xl text-grey-900">XMeme</h4>
-            <p class="text-base text-green-600">Post your memes</p>
+            <p class="text-base text-green-600">By Piyush Sarraf</p>
         </div>
     </div>
 
-    <form class="px-12 space-y-6" action="/memes" method="POST">
+    <form class="px-12 space-y-6"  action="/memes" method="POST">
         <div>
             <input class="border border-black" type="text" name="name" placeholder="Enter Name" required>
         </div>
-        
         <input class="border border-black " size="50" type="url" name="url" placeholder="Enter Url" required>
         <input class="border border-black mx-2" type="text" name="caption" placeholder="Enter caption" required>
-        
         <button class="bg-red-400 text-white font-bold mx-2 my-2 py-1 px-5 rounded-lg hover:bg-red-500 shadow-xl" type="submit">Submit</button>
     </form>
 
-    <!-- <script>
-        $('form').on('submit', (e) => {
-            // e.preventDefault();
-
-            const name = $('#name').val().trim();
-            const url = $('#url').val().trim();
-            const caption = $('#caption').val().trim();
-
-            const data = {
-                name,
-                url,
-                caption
-            };
-
-            $.post('/memes', data, function() {
-                console.log('Server recieved our data');
-            });
-        });
-        // document.getElementById('#form-data').reset();
-    </script> -->
-
-    <!-- CARD COLUMNS -->
-    <!-- component -->
-    <div class="container my-12 mx-auto px-4 md:px-12">
-        <div class="flex flex-wrap -mx-1 lg:-mx-4">
-
-            <!-- Column -->
-            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-                <!-- Article -->
-                <article class="overflow-hidden rounded-lg shadow-lg">
-
-                    <a href="#">
-                        <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                    </a>
-
-                    <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                        <h1 class="text-lg">
-                            <a class="no-underline hover:underline text-black" href="#">
-                                Article Title
-                            </a>
-                        </h1>
-                        <p class="text-grey-darker text-sm">
-                            14/4/19
-                        </p>
-                    </header>
-
-                    <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                        <a class="flex items-center no-underline hover:underline text-black" href="#">
-                            <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                            <p class="ml-2 text-sm">
-                                Author Name
-                            </p>
-                        </a>
-                        <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                            <span class="hidden">Like</span>
-                            <i class="fa fa-heart"></i>
-                        </a>
-                    </footer>
-
-                </article>
-                <!-- END Article -->
-
-            </div>
-            <!-- END Column -->
-
-            <!-- Column -->
-            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-                <!-- Article -->
-                <article class="overflow-hidden rounded-lg shadow-lg">
-
-                    <a href="#">
-                        <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                    </a>
-
-                    <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                        <h1 class="text-lg">
-                            <a class="no-underline hover:underline text-black" href="#">
-                                Article Title
-                            </a>
-                        </h1>
-                        <p class="text-grey-darker text-sm">
-                            14/4/19
-                        </p>
-                    </header>
-
-                    <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                        <a class="flex items-center no-underline hover:underline text-black" href="#">
-                            <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                            <p class="ml-2 text-sm">
-                                Author Name
-                            </p>
-                        </a>
-                        <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                            <span class="hidden">Like</span>
-                            <i class="fa fa-heart"></i>
-                        </a>
-                    </footer>
-
-                </article>
-                <!-- END Article -->
-
-            </div>
-            <!-- END Column -->
-
-            <!-- Column -->
-            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-                <!-- Article -->
-                <article class="overflow-hidden rounded-lg shadow-lg">
-
-                    <a href="#">
-                        <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                    </a>
-
-                    <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                        <h1 class="text-lg">
-                            <a class="no-underline hover:underline text-black" href="#">
-                                Article Title
-                            </a>
-                        </h1>
-                        <p class="text-grey-darker text-sm">
-                            14/4/19
-                        </p>
-                    </header>
-
-                    <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                        <a class="flex items-center no-underline hover:underline text-black" href="#">
-                            <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                            <p class="ml-2 text-sm">
-                                Author Name
-                            </p>
-                        </a>
-                        <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                            <span class="hidden">Like</span>
-                            <i class="fa fa-heart"></i>
-                        </a>
-                    </footer>
-
-                </article>
-                <!-- END Article -->
-
-            </div>
-            <!-- END Column -->
-
-            <!-- Column -->
-            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-                <!-- Article -->
-                <article class="overflow-hidden rounded-lg shadow-lg">
-
-                    <a href="#">
-                        <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                    </a>
-
-                    <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                        <h1 class="text-lg">
-                            <a class="no-underline hover:underline text-black" href="#">
-                                Article Title
-                            </a>
-                        </h1>
-                        <p class="text-grey-darker text-sm">
-                            14/4/19
-                        </p>
-                    </header>
-
-                    <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                        <a class="flex items-center no-underline hover:underline text-black" href="#">
-                            <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                            <p class="ml-2 text-sm">
-                                Author Name
-                            </p>
-                        </a>
-                        <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                            <span class="hidden">Like</span>
-                            <i class="fa fa-heart"></i>
-                        </a>
-                    </footer>
-
-                </article>
-                <!-- END Article -->
-
-            </div>
-            <!-- END Column -->
-
-            <!-- Column -->
-            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-                <!-- Article -->
-                <article class="overflow-hidden rounded-lg shadow-lg">
-
-                    <a href="#">
-                        <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                    </a>
-
-                    <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                        <h1 class="text-lg">
-                            <a class="no-underline hover:underline text-black" href="#">
-                                Article Title
-                            </a>
-                        </h1>
-                        <p class="text-grey-darker text-sm">
-                            14/4/19
-                        </p>
-                    </header>
-
-                    <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                        <a class="flex items-center no-underline hover:underline text-black" href="#">
-                            <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                            <p class="ml-2 text-sm">
-                                Author Name
-                            </p>
-                        </a>
-                        <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                            <span class="hidden">Like</span>
-                            <i class="fa fa-heart"></i>
-                        </a>
-                    </footer>
-
-                </article>
-                <!-- END Article -->
-
-            </div>
-            <!-- END Column -->
-
-            <!-- Column -->
-            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-                <!-- Article -->
-                <article class="overflow-hidden rounded-lg shadow-lg">
-
-                    <a href="#">
-                        <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                    </a>
-
-                    <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                        <h1 class="text-lg">
-                            <a class="no-underline hover:underline text-black" href="#">
-                                Article Title
-                            </a>
-                        </h1>
-                        <p class="text-grey-darker text-sm">
-                            14/4/19
-                        </p>
-                    </header>
-
-                    <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                        <a class="flex items-center no-underline hover:underline text-black" href="#">
-                            <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                            <p class="ml-2 text-sm">
-                                Author Name
-                            </p>
-                        </a>
-                        <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                            <span class="hidden">Like</span>
-                            <i class="fa fa-heart"></i>
-                        </a>
-                    </footer>
-
-                </article>
-                <!-- END Article -->
-
-            </div>
-            <!-- END Column -->
-
-        </div>
-    </div>
+    <div id = "myData" class=""></div>
 
     
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let url = 'http://localhost:5000/memes';
+            fetch(url)
+            .then(data => data.json())
+            .then(res => {
+                //console.log(res);
+                const html = res.map(user => {
+                    return `
+                    <div class="user" style="width: 18rem;">
+                        <img style="border-radius: 10px;"class="avatar" src=${user.url} onerror=this.src="https://i.kym-cdn.com/photos/images/newsfeed/001/306/614/ab0.png">
+                        <div class="card-body">
+                            <b> Author : ${user.name} </b>
+                            <p> Caption : ${user.caption} </p>
+                        </div>
+                        
+                    </div>
+                    `;
+                }).join("");
+                //console.log(html);
+                document
+                    .querySelector('#myData')
+                    .insertAdjacentHTML("afterbegin", html);
+
+            })
+            .catch(err => console.log(err))
+            
+            // function appendData(data) {
+            //     var mainContainer = document.getElementById("myData");
+            //     for (var i = 0; i < data.length; i++) {
+            //         var div = document.createElement("div");
+            //         div.innerHTML = 'Name: ' + data[i].name + ' url : ' + data[i].url + ' description : ' + data[i].caption;
+            //         mainContainer.appendChild(div);
+            //     }
+            // }
+        });
+    </script>
+
 </body>
 
 </html>

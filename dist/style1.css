@@ -8,6 +8,20 @@ Document
 /**
 Use a better box model (opinionated).
 */
+.user{
+  background-color: rgb(238, 241, 241);
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  border-radius: 25px;
+}
+/* img
+{
+  background-image:url('https://i.kym-cdn.com/photos/images/newsfeed/001/306/614/ab0.png');
+  width:400px;
+  height: 400px;
+} */
 
 *,
 *::before,
