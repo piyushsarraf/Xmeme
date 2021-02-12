@@ -58,22 +58,13 @@
                     </div>
                     `;
                 }).join("");
-                //console.log(html);
+                console.log(html);
                 document
                     .querySelector('#myData')
                     .insertAdjacentHTML("afterbegin", html);
 
             })
             .catch(err => console.log(err))
-            
-            // function appendData(data) {
-            //     var mainContainer = document.getElementById("myData");
-            //     for (var i = 0; i < data.length; i++) {
-            //         var div = document.createElement("div");
-            //         div.innerHTML = 'Name: ' + data[i].name + ' url : ' + data[i].url + ' description : ' + data[i].caption;
-            //         mainContainer.appendChild(div);
-            //     }
-            // }
         });
     </script>
 
