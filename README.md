@@ -2,7 +2,7 @@
 
 Its a Website where u can post your memes and with name and caption
 
-Here there are following folders and their dedcription
+Here there are following folders and their description
 * Dist:
     Similar to public folder, where we store index.html files 
 * img:
