@@ -67,8 +67,8 @@ router.post('/', async(req, res) => {
 
     try{
         const savedPost = await post.save();
-        //res.json(savedPost);
-        res.redirect(process.env.URL)
+        res.json(savedPost);
+        //res.redirect(process.env.URL)
     }catch (err) {
         res.json({message: err});
     }
