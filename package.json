@@ -20,7 +20,6 @@
     "path": "^0.12.7",
     "swagger-jsdoc": "^6.0.2",
     "swagger-ui-express": "^4.1.6",
-    "tailwindcss": "^2.0.2",
-    "x_meme_api": "github:karngyan/xmeme-api"
+    "tailwindcss": "^2.0.2"
   }
 }
