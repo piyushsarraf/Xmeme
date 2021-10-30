@@ -1,4 +1,4 @@
-# Xmeme   --hosted on HerokuApp : https://xmeme.piyushsarraf.ml/
+# Xmeme
 
 Its a Website where u can post your memes and with name and caption
 
